@@ -93,44 +93,51 @@ We will start by exploring **how the quality of the prompt affects the output**.
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Color Changing Page</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Random Color Generator</title>
     <style>
         body {
+            margin: 0;
+            height: 100vh;
             display: flex;
             justify-content: center;
             align-items: center;
-            height: 100vh;
-            margin: 0;
             font-family: Arial, sans-serif;
-            transition: background-color 0.5s;
+            color: white;
+            text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
+            transition: background-color 0.3s;
         }
-        #colorInfo {
+        .color-display {
+            font-size: 24px;
+            background: rgba(0, 0, 0, 0.2);
             padding: 20px;
-            background: rgba(255, 255, 255, 0.2);
             border-radius: 8px;
-            text-align: center;
         }
     </style>
 </head>
 <body>
-    <div id="colorInfo">
-        <h2>Current Color:</h2>
-        <p id="colorDisplay"></p>
-        <button onclick="changeColor()">Change Color</button>
-    </div>
+    <div class="color-display" id="colorInfo"></div>
 
     <script>
-        function changeColor() {
+        // Generate random RGB values between 0-255
+        function generateRandomColor() {
             const r = Math.floor(Math.random() * 256);
             const g = Math.floor(Math.random() * 256);
             const b = Math.floor(Math.random() * 256);
-            
-            document.body.style.backgroundColor = `rgb(${r}, ${g}, ${b})`;
-            document.getElementById('colorDisplay').textContent = `RGB(${r}, ${g}, ${b})`;
+            return { r, g, b };
         }
 
-        // Initial color change
-        changeColor();
+        // Update page with new color
+        function updatePage() {
+            const color = generateRandomColor();
+            const rgbString = `rgb(${color.r}, ${color.g}, ${color.b})`;
+            
+            document.body.style.backgroundColor = rgbString;
+            document.getElementById('colorInfo').textContent = rgbString;
+        }
+
+        // Initialize on page load
+        updatePage();
     </script>
 </body>
 </html>
@@ -415,6 +422,7 @@ For more advanced coding tasks, especially for the advanced excersises, workshop
 
 
 ![Copilot agent mode](./img/agentMode.png)
+
 
 
 
