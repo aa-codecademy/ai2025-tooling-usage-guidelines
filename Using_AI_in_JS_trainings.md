@@ -61,9 +61,6 @@ We will start by exploring **how the quality of the prompt affects the output**.
             document.body.style.backgroundColor = `rgb(${r}, ${g}, ${b})`;
             document.getElementById('colorDisplay').textContent = `RGB(${r}, ${g}, ${b})`;
         }
-
-        // Initial color change
-        changeColor();
     </script>
 </body>
 </html>
@@ -422,6 +419,7 @@ For more advanced coding tasks, especially for the advanced excersises, workshop
 
 
 ![Copilot agent mode](./img/agentMode.png)
+
 
 
 
