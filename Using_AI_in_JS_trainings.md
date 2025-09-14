@@ -177,7 +177,7 @@ We can even ask questions for further extension:
 
 ## Using Copilot for code completition
 
-In this section we want to show hoe Copilot can generate code if we give an appropriate comment and start typing code.
+In this section we want to show how Copilot can generate code if we give an appropriate comment and start typing code.
 
 We have a task: <br>
 `Write a function that takes a number as a parameter and returns the number of digits it has.` <br>
@@ -419,6 +419,7 @@ For more advanced coding tasks, especially for the advanced excersises, workshop
 
 
 ![Copilot agent mode](./img/agentMode.png)
+
 
 
 
